@@ -1,0 +1,59 @@
+<groupbox mold="3d" apply="skripsi.sitpast.act.mhs.MahasiswaProfilAct">
+<caption label="Profil Pribadi"></caption>
+			<grid apply="">
+					<columns>
+						<column width="30%"></column>
+						<column width="70%"></column>
+					</columns>
+					<rows>
+						<row>
+							Nama
+							<textbox id="txt_nama" readonly="true"></textbox>
+						</row>
+						<row>
+							NIM
+							<textbox id="txt_nim"  readonly="true"></textbox>
+						</row>
+						<row>
+							Email
+							<textbox id="txt_email"  readonly="true"></textbox>
+						</row>
+						
+						<row>
+							Username
+							<textbox id="txt_username"  readonly="true"></textbox>
+						</row>
+						<row>
+							Password
+							<textbox id="txt_password" type="password"  readonly="true"></textbox>
+						</row>
+						<row>
+							Password Konfirmasi
+							<hlayout>
+							<textbox id="txt_password_konf" type="password"  readonly="true"></textbox>
+							<label value="diisi jika mengganti password"/>
+							</hlayout>
+						</row>
+						<row>
+							No Telp
+							<textbox id="txt_notelp"  readonly="true"></textbox>
+						</row>
+						<row>
+							Alamat
+							<textbox id="txt_alamat"  readonly="true"></textbox>
+						</row>
+						<row>
+							Prodi
+							<label id="lbl_prodi"></label>
+						</row>
+						<row>
+							<label>Aksi</label>
+							<hbox>
+								<button label="Edit" id="btn_edit" forward="onClick=onEdit" visible="true"/>
+								<button label="Simpan" id="btn_simpan" forward="onClick=onSave" visible="false"/>
+							</hbox>
+						</row>
+						
+					</rows>
+				</grid>
+</groupbox>

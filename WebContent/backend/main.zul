@@ -1,0 +1,101 @@
+<?page title="Admin" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<zscript>
+<![CDATA[
+	/*  if(session.getAttribute("user_login")==null)
+	 {
+	 Executions.forward("../index.zul");
+	 }*/
+]]>
+		
+	
+</zscript>
+	<borderlayout id="b" height="100%">
+		<north id="n" size="20%" mold="default" border="0">
+
+			<div>
+				<image src="../images/header-new.jpg"  height="80%" width="100%"/>
+
+				<menubar autodrop="true" droppable="true"
+					focus="true">
+					<menuitem label="Home" href="main.zul"
+						autocheck="true">
+					</menuitem>
+					<menu label="Skripsi">
+						<menupopup>
+							<menuitem label="List Skripsi"
+								target="iframe" href="list_skripsi.zul" />
+							<menuitem label="Tambah Skripsi"
+								target="iframe" href="form_skripsi.zul" />					
+						</menupopup>
+					</menu>
+					<menu label="PKL">
+						<menupopup>
+							<menuitem label="List PKL"
+								target="iframe" href="list_pkl.zul" />
+							<menuitem label="Tambah PKL"
+								target="iframe" href="form_pkl.zul" />					
+						</menupopup>
+					</menu>
+					<menuitem label="Dosen" href="admin/list_dosen.zul" target="iframe" >
+					</menuitem>
+					<menu label="Mahasiswa">
+						<menupopup>
+							<menuitem label="List Mahasiswa"
+								target="iframe" href="list_mahasiswa.zul" />
+							<menuitem label="Tambah Mahasiswa"
+								target="iframe" href="form_mahasiswa.zul" />
+							<menuitem label="Kategori" target="iframe"
+								href="kategori.zul" />
+
+						</menupopup>
+					</menu>
+					<menu label="Pengguna">
+						<menupopup>
+							<menuitem label="Data Pengguna"
+								target="iframe" href="list_pengguna.zul" />
+							<menuitem label="Tambah Pengguna" target="iframe"
+								href="form_pengguna.zul" />
+						</menupopup>
+					</menu>
+					<menu label="Pengumuman">
+						<menupopup>
+							<menuitem label="List Pengumuman"
+								target="iframe" href="list_pengumuman.zul" />
+							<menuitem label="Tambah Pengumuman"
+								target="iframe" href="form_pengumuman.zul" />
+						</menupopup>
+					</menu>
+					<menuitem label="Logout" onClick="onLogout()"
+						id="log_out" autocheck="true" >
+					</menuitem>
+
+				</menubar>
+			</div>
+		</north>
+		<!--Sidebar-->
+
+		<center flex="true">
+
+			<iframe id="iframe" name="iframe" src="gambar_utama.zul"
+				width="100%" height="100%" scrolling="true"
+				style="border: 1px solid gray;">
+
+			</iframe>
+
+		</center>
+		<south height="5%">
+			<toolbar>
+				<label
+					value="Sitpast UIN Syarif Hidayatullah Jakarta @2012" />
+			</toolbar>
+		</south>
+	</borderlayout>
+	<zscript><![CDATA[
+	public void onLogout() {
+		session.removeAttribute("user_login");
+		Executions.sendRedirect("../");
+		
+	}
+]]></zscript>
+</zk>

@@ -1,0 +1,53 @@
+<vlayout apply="org.zkoss.bind.BindComposer" 
+	viewModel="@id('vm') @init('skripsi.sitpast.act.PieChartConfigVM')">
+	<grid width="98%">
+		<columns>
+			<column label="Category"/>
+			<column label="Value" />
+		</columns>
+		<rows>
+			<row>
+				<label value="Tahun Kelulusan" />
+				<combobox id="tahun_lulus">
+					<comboitem label="2012"></comboitem>
+				</combobox>
+			
+			</row>
+		
+			<row>
+				<label value="Teknik Informatika" />
+				<doublebox value="@bind(vm.value1)" constraint="no empty" width="70px"
+					onChange="@global-command('dataChanged', category='Teknik Informatika', num=vm.value1)" />
+			</row>
+			<row>
+				<label value="Sistem Informasi" />
+				<doublebox value="@bind(vm.value2)" constraint="no empty" width="70px"
+					onChange="@global-command('dataChanged', category='Sistem Informasi', num=vm.value2)" />
+			</row>
+			<row>
+				<label value="Agribisnis" />
+				<doublebox value="@bind(vm.value3)" constraint="no empty" width="70px"
+					onChange="@global-command('dataChanged', category='Agribisnis', num=vm.value3)" />
+			</row>
+			<row>
+				<label value="Matematika" />
+				<doublebox value="@bind(vm.value4)" constraint="no empty" width="70px"
+					onChange="@global-command('dataChanged', category='Matematika', num=vm.value4)" />
+			</row>
+		</rows>
+	</grid>
+	<separator height="10px" />
+	<groupbox sclass="z-demo-config">
+		<caption>Chart Control</caption>
+		<radiogroup>
+			<vlayout>
+				<radio label="Pie Chart"
+					onCheck="@global-command('configChanged', threeD=false, exploded=false)" />			
+				<radio label="Pie Chart 3D" selected="true"
+					onCheck="@global-command('configChanged', threeD=true, exploded=false)" />
+				<radio label="Pie Chart Exploded"
+					onCheck="@global-command('configChanged', threeD=false, exploded=true)" />
+			</vlayout>
+		</radiogroup>
+	</groupbox>		
+</vlayout>

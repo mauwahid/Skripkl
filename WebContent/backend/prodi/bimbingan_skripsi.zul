@@ -1,0 +1,39 @@
+<groupbox mold="3d" apply="skripsi.sitpast.act.prodi.BimbinganSkripsiAct">
+<caption label="Bimbingan Skripsi"></caption>
+<groupbox id="gbox_dosen">
+	<caption label="Aksi"/>
+	<div>
+	<hbox align="left">
+		<label value="Pilih Mahasiswa"></label>
+		<combobox id="combo_mahasiswa" forward="onChange=onLoadPKL"></combobox>
+		<button label="Pilih" forward="onClick=onSearch"/>
+		<button label="Tambah" forward="onClick=onAdd"/>
+	</hbox>
+	<separator></separator>
+	<hbox align="right">
+		<label value="Judul : "></label>
+	<label id="judul"></label>		
+	</hbox>
+	<separator></separator>
+	</div>
+</groupbox>
+<panel>
+	<panelchildren>																
+		<listbox id="list_bimbingan_skripsi" visible="true" style="z" mold="paging" pageSize="5">
+			<listhead visible="true">											
+				<listheader label="No" sort="none" width="2%" />
+				<listheader label="Tanggal Bimbingan"/>
+				<listheader label="Nama Mahasiswa"/>
+				<listheader label="Tempat"/>
+				<listheader label="Catatan"/>
+				<listheader label="Aksi"/>		
+															
+			</listhead>	
+			<listitem>
+				
+			
+			</listitem>														
+		</listbox>
+	</panelchildren>
+</panel>
+ </groupbox>

@@ -1,0 +1,106 @@
+<?page title="Admin" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<zscript>
+<![CDATA[
+	/*  if(session.getAttribute("user_login")==null)
+	 {
+	 Executions.forward("../index.zul");
+	 }*/
+]]>
+		
+	
+</zscript>
+	<borderlayout id="b" height="100%">
+		<north id="n" size="20%" mold="default" border="0">
+
+			<div>
+				<image src="../header-fix.png"  height="80%" width="100%"/>
+
+				<menubar autodrop="true" droppable="true"
+					>
+					<menuitem label="Home" href="main.zul"
+						autocheck="true">
+					</menuitem>
+					<menu label="Dosen">
+						<menupopup>
+						<menuitem label="List Dosen"
+								target="iframe" href="list_dosen.zul" />					
+						</menupopup>
+					</menu>
+					<menu label="List Mahasiswa">
+						<menupopup>
+						<menuitem label="List Mahasiswa"
+								target="iframe" href="list_mahasiswa.zul" />
+											
+						</menupopup>
+					</menu>
+					<menu label="List Prodi">
+						<menupopup>
+							<menuitem label="List Prodi"
+								target="iframe" href="list_prodi.zul" />
+										
+						</menupopup>
+					</menu>
+					<menu label="List Skripsi">
+						<menupopup>
+							<menuitem label="List Skripsi"
+								target="iframe" href="list_skripsi.zul" />
+							
+										
+						</menupopup>
+					</menu>
+					<menu label="List PKL">
+						<menupopup>
+							<menuitem label="List PKL"
+								target="iframe" href="list_pkl.zul" />
+							
+										
+						</menupopup>
+					</menu>
+					<menu label="List Dosen">
+						<menupopup>
+							<menuitem label="List Dosen"
+								target="iframe" href="list_dosen.zul" />
+							
+										
+						</menupopup>
+					</menu>
+					<menu label="List User">
+						<menupopup>
+							<menuitem label="List User"
+								target="iframe" href="list_user.zul" />				
+						</menupopup>
+					</menu>
+					
+					<menuitem label="Logout" onClick="onLogout()" target="iframe" >
+					</menuitem>
+					
+				</menubar>
+			</div>
+		</north>
+		<!--Sidebar-->
+
+		<center flex="true">
+
+			<iframe id="iframe" name="iframe" src="../gambar_utama.zul"
+				width="100%" height="100%" scrolling="true"
+				style="border: 1px solid gray;">
+			
+			</iframe>
+
+		</center>
+		<south height="5%">
+			<toolbar>
+				<label
+					value="Sitpast UIN Syarif Hidayatullah Jakarta @2012" />
+			</toolbar>
+		</south>
+	</borderlayout>
+	<zscript><![CDATA[
+	public void onLogout() {
+		session.removeAttribute("user");
+		Executions.sendRedirect("../login.zul");
+		
+	}
+]]></zscript>
+</zk>

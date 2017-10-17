@@ -1,0 +1,76 @@
+<groupbox mold="3d" apply="skripsi.sitpast.act.mhs.FileSkripsiAct">
+<caption label="File Skripsi"></caption>
+			<grid apply="">
+					<columns>
+						<column width="30%"></column>
+						<column width="70%"></column>
+					</columns>
+					<rows>
+						<row>
+							Halaman Awal (Cover - Daftar Tabel)
+							<hbox>
+								<label id="lbl_awal"  value="lampiran.pdf" />
+								<button id="upl_awal" label="Upload"  upload="true" forward="onUpload=onUplAwal(event)"></button>
+								<button id="dwl_awal" label="Download" forward="onClick=onDownloadAwal"/>
+							</hbox>
+						</row>
+						<row>
+							BAB I
+							<hlayout>
+								<label id="lbl_bab1"/>
+								<button id="upl_bab1" label="Upload"  upload="true" forward="onUpload=onUplBab1(event)"></button>
+								<button id="dwl_bab1" label="Download" forward="onClick=onDownloadBab1"/>
+							</hlayout>
+							</row>
+						<row>
+							BAB II
+							<hlayout>
+								<label id="lbl_bab2"/>
+								<button id="upl_bab2" label="Upload"  upload="true" forward="onUpload=onUplBab2(event)"></button>
+								<button id="dwl_bab2" label="Download" forward="onClick=onDownloadBab2"/>
+							</hlayout>
+							</row>
+						<row>
+							BAB III
+							<hlayout>
+								<label id="lbl_bab3"/>
+								<button id="upl_bab3" label="Upload"  upload="true" forward="onUpload=onUplBab3(event)"></button>
+								<button id="dwl_bab3" label="Download" forward="onClick=onDownloadBab3"/>
+							</hlayout>
+							</row>
+						<row>
+							BAB IV
+							<hlayout>
+								<label id="lbl_bab4"/>
+								<button id="upl_bab4" label="Upload"  upload="true" forward="onUpload=onUplBab4(event)"></button>
+								<button id="dwl_bab4" label="Download" forward="onClick=onDownloadBab4"/>
+							</hlayout>
+						</row>
+						<row>
+							BAB V
+							<hlayout>
+								<label id="lbl_bab5"/>
+								<button id="upl_bab5" label="Upload"  upload="true" forward="onUpload=onUplBab5(event)"></button>
+								<button id="dwl_bab5" label="Download" forward="onClick=onDownloadBab5"/>
+							</hlayout>
+						</row>
+						<row>
+							Daftar Pustaka
+							<hlayout>
+								<label id="lbl_dapus"/>
+									<button id="upl_dapus" label="Upload"  upload="true" forward="onUpload=onUplDapus(event)"></button>
+								<button id="dwl_dapus" label="Download" forward="onClick=onDownloadDapus"/>
+						</hlayout>
+						</row>
+						<row>
+							Lampiran
+							<hlayout>
+								<label id="lbl_lampiran"/>
+								<button id="upl_lampiran" label="Upload"  upload="true" forward="onUpload=onUplLampiran(event)"></button>
+								<button id="dwl_lampiran" label="Download" forward="onClick=onDownloadLampiran"/>
+							</hlayout>
+						</row>			
+						
+					</rows>
+				</grid>
+</groupbox>

@@ -1,0 +1,36 @@
+<grid apply="skripsi.sitpast.act.mhs.FormPesanAct">
+	<columns>
+		<column>
+				
+		</column>
+		<column>
+		
+		</column>
+	</columns>
+	<rows>
+		<row>
+			<label>Kepada</label>
+			<combobox id="combo_to_dosen">
+			
+			</combobox>
+		
+		</row>
+		<row>
+			<label>Judul</label>
+			<textbox id="judul"></textbox>
+		</row>
+		<row>
+			<label>Isi Pesan</label>
+			<textbox id="isi" multiline="true" width="400px" height="100px"></textbox>
+		</row>
+		<row>
+			<label>Aksi</label>
+			<hbox>
+				<button label="kirim" forward="onClick=onSend"></button>
+				<button label="Clear/Cancel" forward="onClick=onClear"></button>
+			
+			</hbox>
+		</row>
+	</rows>
+
+</grid>

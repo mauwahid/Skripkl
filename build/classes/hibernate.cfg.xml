@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="HibernateSessionFactory">
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/sitpast</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">root</property>
+		
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+			
+		<property name="hibernate.format_sql">false</property>
+		<property name="hibernate.show_sql">false</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.connection.autocommit">false</property>
+		<property name="connection.pool_size">2000</property>
+		<property name="current_session_context_class">thread</property>
+		<!--
+			<property
+			name="hibernate.cache.provider_class">org.hibernate.cache.OSCacheProvider</property>
+		-->
+		<property name="hibernate.use_identifier_rollback">true</property>
+		<property name="hibernate.transaction.auto_close_session">false</property>
+
+		<!-- Connection auto reconnect after long inactivity -->
+		<property name="connection.autoReconnect">true</property>
+		<property name="connection.autoReconnectForPools">true</property>
+		<property name="connection.is-connection-validation-required">true</property>
+		<mapping class="skripsi.sitpast.domain.Artikel" />
+		<mapping class="skripsi.sitpast.domain.Pesan" />
+		<mapping class="skripsi.sitpast.domain.DosenPKL" />
+		<mapping class="skripsi.sitpast.domain.Mahasiswa" />
+		<mapping class="skripsi.sitpast.domain.PKL" />
+		<mapping class="skripsi.sitpast.domain.Dosen" />
+		<mapping class="skripsi.sitpast.domain.Prodi" />
+		<mapping class="skripsi.sitpast.domain.Pudek" />
+		<mapping class="skripsi.sitpast.domain.Saran" />
+		<mapping class="skripsi.sitpast.domain.Skripsi" />
+		<mapping class="skripsi.sitpast.domain.BimbinganSkripsi" />
+		<mapping class="skripsi.sitpast.domain.UserTable" />
+		<mapping class="skripsi.sitpast.domain.BimbinganPKL" />
+		<mapping class="skripsi.sitpast.domain.DosenBSkripsi" />
+		<mapping class="skripsi.sitpast.domain.DosenBPKL" />
+			
+			
+	</session-factory>
+</hibernate-configuration>

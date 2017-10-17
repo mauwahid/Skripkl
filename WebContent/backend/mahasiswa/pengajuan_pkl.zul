@@ -1,0 +1,36 @@
+<groupbox mold="3d" apply="skripsi.sitpast.act.mhs.PengajuanPKLAct">
+<caption label="Pengajuan PKL"></caption>
+<grid apply="">
+	<columns>
+		<column>
+				
+		</column>
+		<column>
+		
+		</column>
+	</columns>
+	<rows>
+		<row>
+			<label>Pengajuan Judul</label>
+			<textbox id="judul" multiline="true" width="400px" height="100px"></textbox>
+		</row>
+		<row>
+			<label>Tempat</label>
+			<textbox id="tempat" width="400px"></textbox>
+		</row>
+		
+		<row>
+			<label>Status</label>
+			<label id="status"></label>
+		</row>
+		<row>
+			<label>Aksi</label>
+			<hbox>
+				<button label="Simpan" id="btn_simpan" forward="onClick=onSave"></button>
+				<button label="Edit"  id="btn_edit" forward="onClick=onEdit"></button>
+			</hbox>
+		</row>
+	</rows>
+
+</grid>
+</groupbox>

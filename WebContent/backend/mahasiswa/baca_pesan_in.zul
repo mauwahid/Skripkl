@@ -1,0 +1,36 @@
+<grid apply="">
+	<columns>
+		<column>
+				
+		</column>
+		<column>
+		
+		</column>
+	</columns>
+	<rows>
+		<row>
+			<label>Dari</label>
+			<label id="dari"></label>
+		</row>
+		<row>
+			<label>Judul</label>
+			<label id="judul"></label>
+		</row>
+		<row>
+			<label>Isi Pesan</label>
+			<textbox multiline="true" width="400px" height="100px" readonly="true" id="isi"></textbox>
+		</row>
+		<row>
+			<label>Waktu</label>
+			<label id="waktu"></label>
+		</row>
+		<row>
+			<label>Aksi</label>
+			<hbox>
+				<button label="Balas" forward="onClick=onBalas"></button>
+				<button label="Tutup" forward="onClick=onClose"></button>
+			</hbox>
+		</row>
+	</rows>
+
+</grid>

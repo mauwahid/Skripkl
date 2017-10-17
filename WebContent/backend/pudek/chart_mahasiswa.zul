@@ -1,0 +1,41 @@
+<groupbox sclass="z-demo-config">
+<hlayout>
+	<vlayout apply="org.zkoss.bind.BindComposer" 
+			viewModel="@id('vm') @init('skripsi.sitpast.act.pudek.PieChartMahasiswaVM')">
+		<chart id="mychart" title="Chart Angkatan Mahasiswa" 
+			width="550" height="400" paneColor="#ffffff" fgAlpha="128"
+			type="pie" threeD="@bind(vm.threeD)" 
+			model="@bind(vm.model)" engine="@bind(vm.engine)"
+			onClick="@command('showMessage',msg=event.areaComponent.tooltiptext)"/>
+		<hlayout  visible="@bind(not empty vm.message)">
+			Data :<label value="@bind(vm.message)"/>
+		</hlayout>
+	
+	</vlayout>	
+	<vlayout apply="org.zkoss.bind.BindComposer" 
+	viewModel="@id('vm') @init('skripsi.sitpast.act.pudek.PieChartMahasiswaConfigVM')">
+			
+		
+				<label value="Pilih Tahun Angkatan" />
+				<combobox id="tahun_angkatan" onChange="@global-command('dataChanged',tahun=tahun_angkatan.getSelectedItem().getValue().toString())">
+					<comboitem label="2001" value="2010"></comboitem>
+					<comboitem label="2002" value="2011"></comboitem>
+					<comboitem label="2003" value="2012"></comboitem>
+					<comboitem label="2004" value="2013"></comboitem>
+					<comboitem label="2005" value="2014"></comboitem>
+					<comboitem label="2006" value="2010"></comboitem>
+					<comboitem label="2007" value="2011"></comboitem>
+					<comboitem label="2008" value="2012"></comboitem>
+					<comboitem label="2009" value="2013"></comboitem>
+					<comboitem label="2010" value="2014"></comboitem>
+					<comboitem label="2011" value="2014"></comboitem>
+					<comboitem label="2012" value="2014"></comboitem>
+					<comboitem label="2013" value="2014"></comboitem>
+					<comboitem label="2014" value="2014"></comboitem>
+					<comboitem label="2015" value="2014"></comboitem>
+				</combobox>
+	</vlayout>
+	
+
+</hlayout>
+</groupbox>

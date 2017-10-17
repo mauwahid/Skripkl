@@ -1,0 +1,24 @@
+			<grid apply="">
+					<columns>
+						<column width="30%"></column>
+						<column width="70%"></column>
+					</columns>
+					<rows>
+						<row>
+							Nama Prodi
+							<textbox id="text_fak" value="" width="200px"></textbox>
+						</row>
+						<row>
+							Keterangan
+							<textbox id="text_ket" value="" width="200px" height="200px" multiline="true"></textbox>
+						</row>
+						
+						<row>
+							<label>Aksi</label>
+							<hbox>
+								<button label="Input" id="btn_input" forward="onClick=onSave"/>
+								<button label="Batalkan" forward="onClick=onCancel"/>
+							</hbox>
+						</row>
+					</rows>
+				</grid>

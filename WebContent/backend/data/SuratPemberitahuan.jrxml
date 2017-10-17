@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SuratPemberitahuan" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e60f6b94-c140-4a2e-b0f6-634a4d551077">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="449"/>
+	<parameter name="paramDosen1" class="java.lang.String"/>
+	<parameter name="paramDosen2" class="java.lang.String"/>
+	<parameter name="paramNamaMhs" class="java.lang.String"/>
+	<parameter name="paramNIMMhs" class="java.lang.String"/>
+	<parameter name="paramProdi" class="java.lang.String"/>
+	<parameter name="paramSkripsi" class="java.lang.String"/>
+	<parameter name="paramNamaPudek" class="java.lang.String"/>
+	<parameter name="paramGelarPudek" class="java.lang.String"/>
+	<parameter name="paramNIPPudek" class="java.lang.String"/>
+	<variable name="varDosen1" class="java.lang.String"/>
+	<variable name="varDosen2" class="java.lang.String"/>
+	<variable name="varNamaMhs" class="java.lang.String"/>
+	<variable name="varNIM" class="java.lang.String"/>
+	<variable name="varProdi" class="java.lang.String"/>
+	<variable name="varJudulSkripsi" class="java.lang.String"/>
+	<variable name="varTglSetuju" class="java.lang.String"/>
+	<variable name="variable1" class="java.lang.String"/>
+	<variable name="varNamaPudek" class="java.lang.String"/>
+	<variable name="varGelar" class="java.lang.String"/>
+	<variable name="varNIP" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="130" splitType="Stretch">
+			<image>
+				<reportElement uuid="819abf22-d0a8-47d6-8a7e-393a5ada5329" x="14" y="0" width="79" height="81"/>
+				<imageExpression><![CDATA["C:\\Users\\Asus\\Downloads\\logo_uin_jakarta.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="453596b4-98d1-4607-af68-ae4a8aa9941d" x="192" y="0" width="162" height="23"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DEPARTEMEN AGAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="50255797-366d-4715-b39f-48912ec18178" x="150" y="23" width="251" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSITAS ISLAM NEGERI (UIN)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="67908a6b-9b22-4438-ae5e-691788176aa3" x="150" y="41" width="251" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SYARIF HIDAYATULLAH JAKARTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0005c9e7-3f64-4fd4-b837-bb41beca4e1c" x="150" y="61" width="251" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FAKULTAS SAINS DAN TEKNOLOGI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="eb00432a-6629-49fb-b273-0f6adfcbc3b2" x="0" y="91" width="253" height="16"/>
+				<textElement>
+					<font size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jl. Ir. H. Juanda No. 95 Ciputat 15412 Indonesia]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="e8c02572-0f5e-4c7e-8cf9-1f8c0ea07ccb" x="0" y="122" width="555" height="2"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="47b61c0b-e68a-4f24-921d-1e354c8ad571" x="0" y="107" width="282" height="15"/>
+				<textElement/>
+				<text><![CDATA[Telp. : (62-21) 7493606, 7493547 Faks : (62-21) 7493315]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9f26a085-451e-4cfd-b463-299fe91f3ff0" x="401" y="91" width="133" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Email : uinjkt@cabi.net.id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0c20b18-a877-4d91-a3b3-183207f87cb1" x="401" y="107" width="154" height="15"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Website : http://fst.uinjkt.ac.id]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="39ea8ea5-f648-44d2-b95f-e19c8e25dbe0" x="3" y="10" width="189" height="17"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Nomor 	  : UN 01/F9/TL.00/..../.....]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fafcb1f3-9fa8-40a1-ae9a-5084de8a6375" x="3" y="27" width="100" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Lampiran 	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2dfec754-e46c-40e5-8464-3958dbc372f3" x="3" y="47" width="189" height="20"/>
+				<textElement/>
+				<text><![CDATA[Hal  		: Bimibingan Skripsi]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement uuid="3d4b7e34-148d-4046-bc64-7fa281cf5ae5" x="455" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="425" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="2ff08d9d-cb3a-453f-817a-1b876028dd2f" x="15" y="6" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kepada Yth Sdr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="157b66a6-f1fd-4966-a353-0d842abbb745" x="15" y="66" width="149" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Dosen Pembimbing Skripsi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8172bf41-7582-4fd9-8921-d727b02d1afb" x="67" y="98" width="167" height="20"/>
+				<textElement/>
+				<text><![CDATA[Assaalamualaikum Wr Wb,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="18224673-b3a3-4701-a699-af47935c8814" x="68" y="118" width="448" height="28"/>
+				<textElement/>
+				<text><![CDATA[Dengan ini diharapkan ketersidiaan Bapak/Ibu untuk menjadi pembimbing I/II (Materi/Teknis)* penulisan skripsi Mahasiswa :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e531d721-8dc6-485b-9114-fb240cd95e9d" x="115" y="157" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama		:	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="37af488a-294e-4794-bfca-48c028e7fd9e" x="115" y="177" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[NIM		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64aa0503-37f6-44a7-ae3a-c92de0719069" x="115" y="197" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Program Studi	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="802108f5-f145-4ea6-a7f5-e9402f1ef4d7" x="115" y="217" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Judul Skripsi	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="62b95e0d-6935-4244-b4ea-eda133ff643e" x="68" y="250" width="333" height="20"/>
+				<textElement/>
+				<text><![CDATA[Judul tersebut telah disetujui oleh jurusan yang bersangkutan pada tanggal ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="62cedc1d-3452-4431-a822-01c51f456ca4" x="401" y="250" width="82" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{varTglSetuju}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="49d3c663-bdd2-4178-9985-847986854fce" x="67" y="270" width="484" height="31"/>
+				<textElement/>
+				<text><![CDATA[dengan outline, abstraksi, dan daftar pustaka terlampir. Bimbingan skirpis ini diharapkan selesai dalam waktu 6 (enam) bulan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="752a60b1-8578-437c-9aa7-0e959172eae9" x="401" y="301" width="100" height="13"/>
+				<textElement/>
+				<text><![CDATA[a.n Dekan,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="85252e7a-80cb-4c3b-b419-cb51de773b91" x="401" y="314" width="133" height="20"/>
+				<textElement/>
+				<text><![CDATA[Pudek Bidang Akademik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="272687a7-a333-42bd-80cc-ecdb0b5cf8c7" x="383" y="405" width="35" height="20"/>
+				<textElement/>
+				<text><![CDATA[NIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b0e4ecbd-245d-4949-80c3-fe97d6bd66f4" x="15" y="26" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{paramDosen1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="343e6805-60e2-4060-92b4-06f4e246ecd1" x="15" y="46" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{paramDosen2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ab0c9998-e666-4f52-a496-3266ad00a310" x="215" y="157" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{paramNamaMhs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="94086529-5518-4e31-9355-97a2eae430e8" x="215" y="177" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{paramNIMMhs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8f962f75-e9a9-4bef-b61b-f6ce253f38cc" x="215" y="197" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{paramProdi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ffc29ea0-fa7a-4c55-8ecb-d2d6bb189265" x="215" y="217" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{paramSkripsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2ef78a5e-2132-4f8f-b7ea-56c8fc60f6bc" x="383" y="385" width="118" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{paramNamaPudek}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b8ce5e6f-9761-46b8-b58c-95dccd4d51ee" x="501" y="385" width="50" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{paramGelarPudek}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0ee3fd89-3dfa-4d24-9ecf-34acbebeb3c1" x="418" y="405" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{paramNIPPudek}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="37" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="29" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,31 @@
+<groupbox sclass="z-demo-config">
+<hlayout>
+	<vlayout apply="org.zkoss.bind.BindComposer" 
+			viewModel="@id('vm') @init('skripsi.sitpast.act.pudek.PieChartVM')">
+		<chart id="mychart" title="Chart Kelulusan Mahasiswa" 
+			width="550" height="400" paneColor="#ffffff" fgAlpha="128"
+			type="pie" threeD="@bind(vm.threeD)" 
+			model="@bind(vm.model)" engine="@bind(vm.engine)"
+			onClick="@command('showMessage',msg=event.areaComponent.tooltiptext)"/>
+		<hlayout  visible="@bind(not empty vm.message)">
+			Data :<label value="@bind(vm.message)"/>
+		</hlayout>
+	
+	</vlayout>	
+	<vlayout apply="org.zkoss.bind.BindComposer" 
+	viewModel="@id('vm') @init('skripsi.sitpast.act.pudek.PieChartConfigVM')">
+			
+		
+				<label value="Pilih Tahun Kelulusan" />
+				<combobox id="tahun_lulus" onChange="@global-command('dataChanged',tahun=tahun_lulus.getSelectedItem().getValue().toString())">
+					<comboitem label="2010" value="2010"></comboitem>
+					<comboitem label="2011" value="2011"></comboitem>
+					<comboitem label="2012" value="2012"></comboitem>
+					<comboitem label="2013" value="2013"></comboitem>
+					<comboitem label="2014" value="2014"></comboitem>
+				</combobox>
+	</vlayout>
+	
+
+</hlayout>
+</groupbox>

@@ -1,0 +1,34 @@
+<groupbox mold="3d" apply="skripsi.sitpast.act.admin.ListProdiAct">
+<caption label="Prodi"></caption>
+<groupbox id="gbox_prodi">
+	<caption label="Aksi"/>
+	<div align="right" >
+	<hbox>
+		<label value="Cari"></label>
+		<textbox  id="txt_cari"></textbox>
+		<button label="Cari" forward="onClick=onSearch"/>
+		<button label="Refresh" forward="onClick=onRefresh"/>		
+		<button label="Tambah" forward="onClick=onAdd"/>
+	</hbox>
+	</div>
+</groupbox>
+<panel>
+	<panelchildren>																
+		<listbox id="list_prodi" visible="true" style="z" mold="paging" pageSize="10">
+			<listhead visible="true">											
+				<listheader label="No" sort="none" />
+				<listheader label="Nama Prodi"/>
+				<listheader label="Keterangan"/>	
+				<listheader label="Aksi"/>
+			</listhead>	
+			<listitem>
+				<listcell label="1"></listcell>
+				<listcell label="Sains dan Teknologi"></listcell>
+				<listcell label="jurusan Keren"></listcell>
+				<listcell label="Fak Keren"></listcell>
+			
+			</listitem>														
+		</listbox>
+	</panelchildren>
+</panel>
+ </groupbox>

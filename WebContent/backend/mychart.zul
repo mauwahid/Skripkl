@@ -1,0 +1,72 @@
+<vbox>
+	<grid width="400px">
+		<columns>
+			<column label="category" width="150px" />
+			<column label="value" />
+		</columns>
+		<rows>
+			<row>
+				<label value="Tahun"/>
+				<combobox id="combo_year" onChange="onSelectYear()">
+					<comboitem label="2010"/>
+					<comboitem label="2011"/>
+					<comboitem label="2012"/>
+					
+				</combobox>
+			
+			</row>
+		
+			<row>
+				<label id="c0" value="C/C++" />
+				<doublebox id="v0" value="21.2" constraint="no empty"
+					onChange="update(0)" />
+			</row>
+			<row>
+				<label id="c1" value="VB" />
+				<doublebox id="v1" value="10.2" constraint="no empty"
+					onChange="update(1)" />
+			</row>
+			<row>
+				<label id="c2" value="Java" />
+				<doublebox id="v2" value="40.4" constraint="no empty"
+					onChange="update(2)" />
+			</row>
+			<row>
+				<label id="c3" value="PHP" />
+				<doublebox id="v3" value="28.2" constraint="no empty"
+					onChange="update(3)" />
+			</row>
+		</rows>
+	</grid>
+	<checkbox label="3D Chart" checked="true"
+		onCheck="mychart.setThreeD(self.isChecked())" />
+	<chart id="mychart" title="Pie Chart Demo" width="500" height="250"
+		type="pie" threeD="true" fgAlpha="128">
+		<attribute name="onClick">
+			Area area = event.getAreaComponent();
+			if (area != null) {
+			    alert(""+area.getAttribute("entity")+": "+area.getTooltiptext());
+			}
+		</attribute>
+		<zscript>
+			void update(int rowIndex) {
+				Label lb = (Label) self.getFellow("c"+rowIndex);
+				Doublebox db = (Doublebox) self.getFellow("v"+rowIndex);
+				model.setValue(lb.value, new Double(db.getValue().doubleValue()));
+		  	}  
+		  	PieModel model = new SimplePieModel();
+			for(int j=0; j<=4; ++j) {
+				update(j);
+		  	}
+		  	mychart.setModel(model);
+		  	
+		  	
+		  	void onSelectYear(){
+		  		int yearSelect = combo_year.getSelectedItem().getValue();
+		  		
+		  		org.hibernate.Session sess = org.zkoss.zkplus.hibernate.HibernateUtil.getSessionFactory().openSession();
+		  	}
+		</zscript>
+	</chart>
+	<toolbarbutton label="See More chart..." href="/data/morechart.zul" target="zksandbox"/>
+</vbox>

@@ -1,0 +1,55 @@
+<groupbox mold="3d" apply="skripsi.sitpast.act.dosen.PenilaianSkripsiAct">
+<caption label="Penilaian Skripsi"></caption>
+<groupbox id="gbox_dosen">
+	<caption label="Aksi"/>
+	<div>
+	<hbox align="left">
+		<label value="Pilih Mahasiswa"></label>
+		<combobox id="combo_mahasiswa" width="400px"  forward="onChange=onLoadSkripsi"></combobox>
+		<button label="Pilih" forward="onClick=onSearch"/>
+
+	</hbox>
+	<separator></separator>
+	<hbox align="right">
+		<label value="Judul : "></label>
+	<label id="judul"></label>		
+	</hbox>
+	<separator></separator>
+	</div>
+</groupbox>
+<panel>
+	<panelchildren>																
+		<grid apply="">
+					<columns>
+						<column width="30%"></column>
+						<column width="70%"></column>
+					</columns>
+					<rows>
+						<row>
+							Penampilan
+							<textbox id="nilai_penampilan" readonly="true"></textbox>
+						</row>
+						<row>
+							Kemampuan
+							<textbox id="nilai_kemampuan"  readonly="true"></textbox>
+						</row>
+						<row>
+							Kerapihan
+							<textbox id="nilai_kerapihan"  readonly="true"></textbox>
+						</row>
+						<row>
+							Total
+								<label id="nilai_total"/>
+						</row>	
+						<row>
+							<label>Aksi</label>
+							<hbox>
+								<button label="Edit" id="btn_edit" forward="onClick=onEdit" visible="true"/>
+								<button label="Simpan" id="btn_simpan" forward="onClick=onSave" visible="false"/>
+							</hbox>
+						</row>
+					</rows>
+				</grid>
+	</panelchildren>
+</panel>
+ </groupbox>

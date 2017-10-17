@@ -1,0 +1,44 @@
+<groupbox mold="3d" apply="skripsi.sitpast.act.mhs.DataSkripsiAct">
+<caption label="Data Skripsi"></caption>
+			<grid apply="">
+					<columns>
+						<column width="30%"></column>
+						<column width="70%"></column>
+					</columns>
+					<rows>
+						<row>
+							<label value= "Judul"/>
+							<label id="lbl_judul"/>
+						</row>
+						<row>
+							Pembimbing I
+							<label id="lbl_pembimbing1"/>
+						</row>
+						<row>
+							Pembimbing II
+							<label id="lbl_pembimbing2"/>
+						</row>
+						<row>
+							Tanggal Mulai
+							<label id="lbl_tgl_mulai"/>
+						</row>
+						<row>
+							Tanggal Selesai
+							<label id="lbl_tgl_selesai"/>
+						</row>
+						<row>
+							Tanggal Seminar
+							<label id="lbl_tgl_seminar"/>
+						</row>
+						<row>
+							Tanggal Sidang
+							<label id="lbl_tgl_sidang"/>
+						</row>
+						<row>
+							Status Persetujuan
+							<label id="lbl_persetujuan"/>
+						</row>
+						
+					</rows>
+				</grid>
+</groupbox>

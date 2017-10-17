@@ -1,0 +1,13 @@
+<vlayout apply="org.zkoss.bind.BindComposer" 
+	viewModel="@id('vm') @init('skripsi.sitpast.act.pudek.PieChartVM')">
+	<chart id="mychart" title="Chart Kelulusan Mahasiswa" 
+		width="550" height="400" paneColor="#ffffff" fgAlpha="128"
+		type="pie" threeD="@bind(vm.threeD)" 
+		model="@bind(vm.model)" engine="@bind(vm.engine)"
+		onClick="@command('showMessage',msg=event.areaComponent.tooltiptext)"/>
+	<hlayout  visible="@bind(not empty vm.message)">
+		Data :<label value="@bind(vm.message)"/>
+	</hlayout>
+	
+</vlayout>	
+

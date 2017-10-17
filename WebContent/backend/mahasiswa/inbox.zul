@@ -1,0 +1,37 @@
+<groupbox mold="3d" apply="skripsi.sitpast.act.mhs.InboxAct">
+<caption label="Pesan Masuk"></caption>
+<groupbox id="gbox_dosen">
+	<caption label="Aksi"/>
+	<div align="right" >
+	<hbox>
+		<label value="Cari"></label>
+		<textbox  id="txt_cari"></textbox>
+		<button label="Cari" forward="onClick=onSearch"/>
+		<button label="Refresh" forward="onClick=onRefresh"/>
+	</hbox>
+	</div>
+</groupbox>
+<panel>
+	<panelchildren>																
+		<listbox id="list_inbox" visible="true" style="z" mold="paging" pageSize="5">
+			<listhead visible="true">											
+				<listheader label="No" sort="none" width="2%" />
+				<listheader label="Waktu"/>
+				<listheader label="Pengirim"/>
+				<listheader label="Judul"/>	
+				<listheader label="Isi"/>
+				<listheader label="Status"/>		
+				<listheader label="Aksi"/>		
+											
+			</listhead>	
+			<listitem>
+				<listcell label="1"></listcell>
+				<listcell label="Sains dan Teknologi"></listcell>
+				<listcell label="jurusan Keren"></listcell>
+				<listcell label="Fak Keren"></listcell>
+			
+			</listitem>														
+		</listbox>
+	</panelchildren>
+</panel>
+ </groupbox>

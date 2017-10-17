@@ -1,0 +1,38 @@
+<groupbox mold="3d" apply="skripsi.sitpast.act.mhs.DataPKLAct">
+<caption label="Data PKL"></caption>
+			<grid apply="">
+					<columns>
+						<column width="30%"></column>
+						<column width="70%"></column>
+					</columns>
+					<rows>
+						<row>
+							<label value= "Judul"/>
+							<label id="lbl_judul"/>
+						</row>
+						<row>
+							Tempat PKL
+							<label id="lbl_tempat"/>
+						</row>
+						<row>
+							Pembimbing
+							<label id="lbl_pembimbing"/>
+						</row>
+						<row>
+							Tanggal Mulai
+							<label id="lbl_tgl_mulai"/>
+						</row>
+						<row>
+							Tanggal Selesai
+							<label id="lbl_tgl_selesai"/>
+						</row>
+						
+						<row>
+							Status Persetujuan
+							<label id="lbl_persetujuan"/>
+						</row>
+						
+						
+					</rows>
+				</grid>
+</groupbox>

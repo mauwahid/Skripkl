@@ -1,0 +1,50 @@
+<grid apply="">
+					<columns>
+						<column width="30%"></column>
+						<column width="70%"></column>
+					</columns>
+					<rows>
+						<row>
+							Judul PKL
+							<textbox id="judul_pkl" value="" width="200px"></textbox>
+						</row>
+						<row>
+							Mahasiswa
+							<combobox><comboitem label="Maulana"/><comboitem label="Wahid"/></combobox>
+						</row>
+						<row>
+							Dosen Pembimbing
+							<combobox><comboitem label="Maulana"/><comboitem label="Wahid"/></combobox>
+						</row>
+						<row>
+							Tempat PKL
+							<textbox id="tempat" value="" width="200px"  multiline="true"></textbox>
+						</row>
+						<row>
+							Tanggal Mulai 
+							<datebox id="tgl_mulai"/>
+						</row>
+						<row>
+							Tanggal Akhir
+							<datebox />
+						</row>
+						<row>
+							Selesai 
+									<radiogroup>
+										<radio checked="true" label="Belum"/>
+										<radio checked="false" label="Selesai"/>
+									</radiogroup>				
+						</row>
+						<row>
+							Data PKL
+							<fileupload label="Upload Zip" />
+						</row>
+						<row>
+							<label>Aksi</label>
+							<hbox>
+								<button label="Input" id="btn_input" forward="onClick=onSave"/>
+								<button label="Batalkan" forward="onClick=onCancel"/>
+							</hbox>
+						</row>
+					</rows>
+				</grid>

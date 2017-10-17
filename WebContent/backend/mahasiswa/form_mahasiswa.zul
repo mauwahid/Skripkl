@@ -1,0 +1,49 @@
+			<grid apply="">
+					<columns>
+						<column width="30%"></column>
+						<column width="70%"></column>
+					</columns>
+					<rows>
+						<row>
+							<label value= "Nama Mahasiswa"/>
+							<textbox id="txt_mhs" value="" width="200px"></textbox>
+						</row>
+						<row>
+							NIM
+							<textbox id="txt_nim" value="" width="200px" ></textbox>
+						</row>
+						<row>
+							<label value="Username"/>
+							<textbox id="txt_username" value="" width="200px" ></textbox>
+						</row>
+						<row>
+							Password
+							<textbox id="txt_password" value="" width="200px" ></textbox>
+						</row>
+						<row>
+							Prodi
+							<combobox id="combo_prodi"></combobox>
+						</row>
+						<row>
+							Angkatan
+							<textbox id="txt_angkatan" width="200px" ></textbox>
+						</row>
+						<row>
+							No Telp
+							<textbox id="txt_notelp"  width="200px" ></textbox>
+						</row>
+						<row>
+							Email
+							<textbox id="txt_email" value="" width="200px" ></textbox>
+						</row>
+						
+						
+						<row>
+							<label>Aksi</label>
+							<hbox>
+								<button label="Input" id="btn_input" forward="onClick=onSave"/>
+								<button label="Batalkan" forward="onClick=onCancel"/>
+							</hbox>
+						</row>
+					</rows>
+				</grid>

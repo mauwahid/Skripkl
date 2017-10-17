@@ -1,0 +1,42 @@
+<groupbox mold="3d" apply="skripsi.sitpast.act.admin.ListSkripsiAct">
+<caption label="List Skripsi"></caption>
+<groupbox id="gbox_skripsi">
+	<caption label="Aksi"/>
+	<div align="right" >
+	<hbox>
+		<label value="Cari"></label>
+		<textbox  id="txt_cari"></textbox>
+		<button label="Cari" forward="onClick=onSearch"/>
+		<button label="Refresh" forward="onClick=onRefresh"/>		
+		<button label="Tambah" forward="onClick=onAdd"/>
+	</hbox>
+	</div>
+</groupbox>
+<panel>
+	<panelchildren>																
+		<listbox id="list_skripsi" visible="true" style="z" mold="paging" pageSize="10" sizedByContent="true">
+			<listhead visible="true">											
+				<listheader label="No" sort="none" width="2%" />
+				<listheader label="Judul"/>
+				<listheader label="Mahasiswa"/>	
+				<listheader label="NIM"/>	
+				<listheader label="Tanggal Mulai"/>
+				<listheader label="Tanggal Selesai"/>
+				<listheader label="Dosen Pembimbing I"/>
+				<listheader label="Dosen Pembimbing II"/>	
+					
+				<listheader label="Status"/>	
+				<listheader label="Aksi"/>		
+											
+			</listhead>	
+			<listitem>
+				<listcell label="1"></listcell>
+				<listcell label="Sains dan Teknologi"></listcell>
+				<listcell label="jurusan Keren"></listcell>
+				<listcell label="Fak Keren"></listcell>
+			
+			</listitem>														
+		</listbox>
+	</panelchildren>
+</panel>
+ </groupbox>
